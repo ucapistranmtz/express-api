@@ -1,6 +1,9 @@
 const express = require('express');
+const routes = require('./routes')
 
 const app =  express();
+app.use(express.json())
+app.use(routes);
 
 
 app.get('/health',(req,res)=>{
@@ -14,5 +17,5 @@ app.get('/health',(req,res)=>{
 const port = process.env.PORT || 3000;
 
 app.listen(port,()=> {
-    console.log(`Server is readcy at http://localhost:${port}`)
+    console.log(`Server is ready at http://localhost:${port}`)
 })
