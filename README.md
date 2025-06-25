@@ -42,8 +42,16 @@ npm test
    npx tsc --init
    ```
 2. Create `src/index.ts` to set up Express and mount your routes.
-3. Implement controllers, services, and routes under `src/`.
-4. Add scripts to `package.json`:
+3. Add a simple user model in `src/models/user.model.ts`:
+   ```ts
+   export interface User {
+     id: number;
+     name: string;
+     email: string;
+   }
+   ```
+4. Implement controllers, services, and routes under `src/`.
+5. Add scripts to `package.json`:
    ```json
    "scripts": {
      "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
@@ -52,6 +60,6 @@ npm test
      "test": "npm run build && node --test ./dist/tests"
    }
    ```
-5. Run `npm run dev` and exercise the endpoints using curl or Postman.
+6. Run `npm run dev` and exercise the endpoints using curl or Postman.
 
 These steps help bootstrap a TypeScript Express API quickly for interview demonstrations.

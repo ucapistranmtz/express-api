@@ -1,10 +1,5 @@
 
-
-interface User {
-    id: number;
-    name: string;
-    email: string;
-}
+import { User } from '../models/user.model';
 
 const users: User[] = [
     {
