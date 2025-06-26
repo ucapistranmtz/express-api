@@ -1,8 +1,12 @@
-import {UserDto,} from '../models/user.schema'
-import { memmoryUserRepository } from '../repositories/memory.repository'
- 
-const repository = new memmoryUserRepository();
-export const getAllUsers = ():UserDto[] => {
-    const users:UserDto[]=repository.list();
-    return users
+import {UserDto,UserSchema,CreateUserSchema,CreateUserDto} from '../models/user.schema';
+import memoryUserRepository from '../repositories/memoryUser.repository';
+
+const userRepository = new memoryUserRepository();
+
+export const getAllUsers=  async ()=> {
+    return  await userRepository.list();
+}
+
+export const createNewUser =async  (user: CreateUserDto) => {
+   return await userRepository.create(user)
 }
