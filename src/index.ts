@@ -15,3 +15,4 @@ app.listen(PORT,()=> {
     console.log(`App is listening at this address http://localhost:${PORT}`)
 });
 
+export default app;

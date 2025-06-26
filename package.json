@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ucapistranmtz/express-api#readme",
   "dependencies": {
+    "@types/node": "^24.0.4",
     "express": "^5.1.0"
   },
   "devDependencies": {
